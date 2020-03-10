@@ -1,0 +1,25 @@
+.container {
+  font-family: 'Rubik', sans-serif;
+  color: #4a4a4a;
+}
+
+.input__guess-number {
+  background-color: #e3e3e3;
+  border-radius: 10px;
+  border: none;
+  padding: 10px 20px;
+}
+
+.input__clue,
+.input__tries {
+  border: solid 2px #e3e3e3;
+  padding: 10px 20px;
+}
+
+.try-btn {
+  background-color: #3cdbc0;
+  color: whitesmoke;
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: none;
+}
