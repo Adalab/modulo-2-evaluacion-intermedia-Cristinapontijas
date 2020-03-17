@@ -12,7 +12,7 @@ console.log(randomNumber);
 const guessBtn = document.querySelector('.js-btn');
 const playerNumber = document.querySelector('.js-input-number');
 const clueInput = document.querySelector('.js-input-clue');
-const clueAttempt = document.querySelector('.js-input-attempt');
+const attemptInput = document.querySelector('.js-input-attempt');
 
 function getPlayerNumber(ev) {
   ev.preventDefault();
@@ -31,7 +31,3 @@ function getPlayerNumber(ev) {
 }
 
 guessBtn.addEventListener('click', getPlayerNumber);
-
-// paint clue
-
-function paintClue() {}
