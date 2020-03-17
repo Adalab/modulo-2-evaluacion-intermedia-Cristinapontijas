@@ -14,22 +14,24 @@ const playerNumber = document.querySelector('.js-input-number');
 const clueInput = document.querySelector('.js-input-clue');
 const clueAttempt = document.querySelector('.js-input-attempt');
 
-function getPlayerNumber() {
+function getPlayerNumber(ev) {
+  ev.preventDefault();
   let playerNumberValue = playerNumber.value;
   console.log(playerNumberValue);
+
   if (randomNumber === parseInt(playerNumberValue)) {
     clueInput.value = '¡Olé, lo has adivinado!';
-    console.log('¡Olé, lo has adivinado!');
-  } else if (playerNumberValue > randomNumber) {
+  } else if (randomNumber < playerNumberValue) {
     clueInput.value = 'Prueba con un número más pequeño...';
-    console.log('Prueba con un número más pequeño...');
-  } else if (playerNumberValue < randomNumber) {
+  } else if (randomNumber > playerNumberValue) {
     clueInput.value = '¡Ui! Prueba con un número más grande...';
-    console.log('¡Ui! Prueba con un número más grande...');
   } else {
     clueInput.value = 'Uhm, no sé...Prueba con un número del 1 al 100.';
-    console.log('Uhm, no sé...Prueba con un número del 1 al 100.');
   }
 }
 
-guessBtn.addEventListener('click', getPlayerNumber());
+guessBtn.addEventListener('click', getPlayerNumber);
+
+// paint clue
+
+function paintClue() {}
